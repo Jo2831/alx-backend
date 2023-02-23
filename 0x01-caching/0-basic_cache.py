@@ -1,20 +1,24 @@
 #!/usr/bin/python3
 """
-file 0-basic_cache
+Module 0-basic_cache
 """
-
-from basic_caching import BaseCaching
+from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
     """
-    overrides put() and self()
+    Overrides put() nad self()
+    from parent
     """
 
-    def put(self, Key, item):
+    def put(self, key, item):
+        """Add an item in the cache
+        """
         if key and item:
             self.cache_data[key] = item
 
     def get(self, key):
+        """Get an item by key
+        """
         value = self.cache_data.get(key)
         return value
