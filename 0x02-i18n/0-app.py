@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-file 0-app
+Module 0-app
 """
 from flask import Flask, render_template
 
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    """desplay the index file"""
+    """didplays a basic hello world message"""
     return render_template("0-index.html")
 
 
